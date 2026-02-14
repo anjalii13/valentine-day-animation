@@ -1,0 +1,90 @@
+body{
+    background-image: url("./assets/bgimg.jpg");
+
+}
+main{
+    height: 350px;
+    width: 700px;
+    background-color: pink;
+    border-radius: 40px;
+    text-align: center;
+  margin-left: 250px;
+  margin-top: 200px;
+ box-shadow: 0 0 25px 5px rgba(255, 0, 0, 0.7);
+
+
+}
+
+.mainbg{
+     animation: bgColorChange 7s 2s infinite;
+     
+}
+.red{
+    color: red;
+}
+main h2{
+font-family: cursive;
+font-size: 50px;
+padding-top: 60px;
+}
+.yes , .no{
+    height: 50px;
+    width: 150px;
+    
+    border-radius: 30px;
+    border: none;
+    font-size: 25px;
+}
+.no{
+    background-color: rgb(233, 95, 118);
+    color: white;
+    margin-right: 55px;
+}
+.transformBox {
+    transition: transform 0.3s ease;
+    position: relative;
+}
+.transformBox:hover{
+            transform: translatex(-80px);
+            color: transparent;   
+
+}
+.transformBox:hover::after {
+    content: "😡😡😡";
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.yes{
+    transition: transform 6s;
+    margin-left: 30px;
+}
+.yes:hover{
+    transform: scale(2,2);
+}
+.blinkBox{
+            background-color: rgb(215, 23, 55);
+            animation: blinkText 10s 5s infinite;
+            
+        }
+@keyframes blinkText{
+            0%{background-color: rgb(220, 102, 102); color: black;}
+
+            20%{background-color: rgb(201, 124, 122); color:white;}
+
+            40%{background-color: rgb(240, 59, 59); color: yellow;}
+            60%{background-color: aliceblue;color: red;}
+            80%{background-color: rgb(230, 151, 231);color:blueviolet;}
+
+            100%{background-color: rgb(219, 25, 148); color:white;}
+        }
+        @keyframes bgColorChange{
+            0%{background-color: pink;}
+            20%{background-color: rgb(233, 93, 116);}
+            40%{background-color: palevioletred;}
+            60%{ background-color: rgb(240, 78, 132);}
+            80%{background-color: crimson;}
+            100%{background-color: pink;}
+        }
